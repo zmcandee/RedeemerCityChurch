@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Redeemer City Church</title>
+  <meta charset="utf-8">
+  <meta content='noindex,nofollow' name='robots'>
+  <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
+  <meta content="Redeemer City Church exists to see the cities of Fitchburg and Madison renewed through the Gospel." name="description">
+  <meta content="Redeemer City Church" property="og:site_name">
+  <meta content="Redeemer City Church - Fitchburg, WI" property="og:title">
+  <meta content="website" property="og:type">
+  <meta content="" property="og:image"><!-- TODO -->
+  <meta content="Redeemer City Church exists to see the cities of Fitchburg and Madison renewed through the Gospel." property="og:description">
+  <meta content="https://www.redeemercitychurch.org" property="og:url">
+  <meta content="summary_large_image" property="twitter:card">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,300italic%7CLato:400,400italic,300,300italic,900,900italic&display=swap" rel="stylesheet" type="text/css"><!-- TODO: pick fonts -->
+  <link href="" rel="icon" type="image/png"><!-- TODO: Refactor svg logo to png -->
+  <link href="" rel="apple-touch-icon"><!-- TODO: Refactor svg logo to png -->
+
+  <style>
+        :root{--color-bg:#fff;--color-fg:#222;--color-accent:#C40;--color-soft-bg:#ddd;--color-soft-fg:#555}
+        body{color:var(--color-fg);background:var(--color-bg);text-align:center;margin:0;padding:0;font-family:Oswald,san-serif;font-weight:300}
+        #wrapper{max-width:900px;min-height:100%;height:auto;margin:0 auto;padding:0}
+        #wrapper > section{margin:0 1em}
+        h1,h2,h3,h4{display:block;text-transform:uppercase;letter-spacing:0.2em;font-weight:900;font-family:Oswald,san-serif;}
+        a{color:var(--color-soft-fg);text-decoration:none}
+        a:hover{color:var(--color-accent);text-decoration:none;font-variant:italic}
+        dd,p{line-height:1.7em}
+        header > p{line-height:1rem}
+
+        #wrapper > header > svg{max-width:300px;height:205px;margin:0 auto;display:block}
+
+        ul{list-style:none;display:block;padding:0;margin:1em 0 0 0}
+        ul > li{display:inline-block;margin:0.5em;padding:0}
+        nav > ul > li > a{min-width:3.5em;background:var(--color-soft-fg);padding:0.5em 2em;display:block;color:var(--color-bg);text-decoration:none;border-radius:0.5em;text-transform:uppercase}
+        nav > ul > li > a:hover{background:var(--color-accent);color:var(--color-bg)}
+        nav > a{width:2em;height:2em;background:var(--color-soft-fg);border-radius:100%;display:none;justify-content:center;align-items:center;font-weight:bold;color:var(--color-bg);text-decoration:none;position:fixed;bottom:1em;right:1em}
+        nav > a:hover{background:var(--color-accent);color:var(--color-bg)}
+        @media screen and (max-width: 600px) {
+            nav > ul{margin:0}
+            nav > ul > li{display:block}
+            nav > a{display:flex}
+        }
+
+        section > section{padding-top:2rem}
+
+        dl{text-align:left;padding:0;margin:0;display:block}
+        dt{font-weight:bold;display:inline-block}
+
+        #leadership > section{display:inline-block;max-width:300px;margin:0 2rem;vertical-align:text-top}
+        #leadership > section > p{text-align:justify;line-height:1.7em}
+        #leadership > section > img{border-radius:100%;width:200px;height:200px;margin:0 auto}
+
+        #leadership a > svg{width:1.1em;height:1.1rem;padding:0;margin:0 0.5em 0 0;}
+        #sermon a{width:3em;height:3rem}
+
+        section ul{display:inline-block}
+        section li > a{color:var(--color-soft-fg);width:120px;height:120px;display:flex;justify-content:center;align-items:center}
+        section li > a:hover{color:var(--color-accent)}
+        section li > a > span{display:none}
+
+        form{max-width:600px;margin:0 auto}
+        input[type="text"], input[type="email"],textarea{padding:0 1rem;font-size:1rem;line-height:1.6em;height:2em;background:var(--color-soft-fg);border:none;border-radius:0.5rem;margin:0.5rem auto;width:90%;font:inherit;color:var(--color-bg)}
+        textarea::placeholder, input::placeholder{opacity:1;color:var(--color-soft-bg)}
+        textarea{height:8em}
+        #leadership a, #giving a, #services a, button{font:inherit;min-width:3.5em;background:var(--color-soft-fg);padding:0.5em 2em;border:none;margin:2em;display:inline-block;color:var(--color-bg);text-decoration:none;border-radius:0.5em;text-transform:uppercase}
+        #leadership a:hover, #giving a:hover, #services a:hover, button:hover{background:var(--color-accent);color:var(--color-bg)}
+
+        footer{background:none;color:var(--color-fg)}
+        footer > ul{display:inline-block}
+        footer > ul > li > a{color:var(--color-bg);width:2em;height:2em;background:var(--color-soft-fg);border-radius:100%;display:flex;justify-content:center;align-items:center}
+        footer > ul > li > a:hover{background:var(--color-accent);color:var(--color-bg)}
+        footer > ul > li > a > span{display:none}
+        footer > ul > li > a > svg{width:60%;height:60%;display:block;position:relative}
+        hr{border:none;border-top:1px var(--color-fg) solid;margin:2rem}
+  </style>
+  <script async src="https://js.churchcenter.com/modal/v1">
+  </script>
+</head>
+<body>
+  <svg display="none" height="0" version="1.1" viewbox="0 0 40 40" width="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink=
+  "http://www.w3.org/1999/xlink">
+  <symbol id="logo" viewbox="0 0 110 75">
+    <path d="M0 46h11v29H0zM16 37h11v38H16zM67 11h11v64H67zM83 47h11v28H83zM99 58h11v17H99z" fill="#414142" transform="scale(1)"></path>
+    <path d="M33 31h11v44H33zM33 4h11v20H33zM50 31h11v44H50zM50 0h11v24H50z" fill="#cd492e" transform="scale(1)"></path>
+  </symbol>
+  <symbol id="icon-email" viewbox="0 0 40 40">
+    <path d="M37.3,15.3v15.3c0,0.8-0.3,1.6-0.9,2.2c-0.6,0.6-1.4,0.9-2.2,0.9H5.8c-0.8,0-1.6-0.3-2.2-0.9s-0.9-1.4-0.9-2.2V15.3 c0.5,0.6,1.2,1.1,2,1.7c4.7,3.1,7.9,5.4,9.6,6.7c0.7,0.5,1.4,0.9,1.8,1.2c0.4,0.3,1,0.6,1.9,0.9c0.7,0.3,1.5,0.5,2.1,0.5l0,0 c0.6,0,1.4-0.2,2.1-0.5c0.7-0.3,1.4-0.6,1.9-0.9c0.4-0.3,1-0.7,1.8-1.2c2.2-1.6,5.4-3.8,9.6-6.7C36.1,16.5,36.7,15.9,37.3,15.3 L37.3,15.3z M37.3,9.6c0,1-0.3,2-0.9,2.9c-0.6,0.9-1.5,1.8-2.4,2.4c-4.9,3.3-7.9,5.4-9,6.2c-0.1,0.1-0.4,0.3-0.8,0.6 c-0.4,0.3-0.7,0.5-1,0.7c-0.3,0.2-0.6,0.4-1,0.6c-0.4,0.2-0.7,0.4-1.1,0.5c-0.4,0.1-0.6,0.2-0.9,0.2l0,0c-0.3,0-0.6-0.1-0.9-0.2 c-0.3-0.1-0.7-0.3-1.1-0.5c-0.4-0.2-0.7-0.4-1-0.6c-0.3-0.2-0.6-0.4-1-0.7c-0.4-0.3-0.7-0.5-0.8-0.6c-1.1-0.8-2.8-2-5.1-3.5 c-2.3-1.6-3.3-2.4-3.7-2.7c-0.8-0.5-1.6-1.2-2.3-2.2s-1-1.9-1-2.6c0-1,0.3-1.9,0.8-2.5c0.5-0.6,1.2-1,2.3-1h28.4 c0.8,0,1.6,0.3,2.2,0.9C37.1,8.1,37.3,8.8,37.3,9.6L37.3,9.6z"
+    fill="currentColor"></path>
+  </symbol>
+  <symbol id="icon-insta" viewbox="0 0 40 40">
+    <path d="M20,7c4.2,0,4.7,0,6.3,0.1c1.5,0.1,2.3,0.3,3,0.5C30,8,30.5,8.3,31.1,8.9c0.5,0.5,0.9,1.1,1.2,1.8c0.2,0.5,0.5,1.4,0.5,3 C33,15.3,33,15.8,33,20s0,4.7-0.1,6.3c-0.1,1.5-0.3,2.3-0.5,3c-0.3,0.7-0.6,1.2-1.2,1.8c-0.5,0.5-1.1,0.9-1.8,1.2 c-0.5,0.2-1.4,0.5-3,0.5C24.7,33,24.2,33,20,33s-4.7,0-6.3-0.1c-1.5-0.1-2.3-0.3-3-0.5C10,32,9.5,31.7,8.9,31.1 C8.4,30.6,8,30,7.7,29.3c-0.2-0.5-0.5-1.4-0.5-3C7,24.7,7,24.2,7,20s0-4.7,0.1-6.3c0.1-1.5,0.3-2.3,0.5-3C8,10,8.3,9.5,8.9,8.9 C9.4,8.4,10,8,10.7,7.7c0.5-0.2,1.4-0.5,3-0.5C15.3,7.1,15.8,7,20,7z M20,4.3c-4.3,0-4.8,0-6.5,0.1c-1.6,0-2.8,0.3-3.8,0.7 C8.7,5.5,7.8,6,6.9,6.9C6,7.8,5.5,8.7,5.1,9.7c-0.4,1-0.6,2.1-0.7,3.8c-0.1,1.7-0.1,2.2-0.1,6.5s0,4.8,0.1,6.5 c0,1.6,0.3,2.8,0.7,3.8c0.4,1,0.9,1.9,1.8,2.8c0.9,0.9,1.7,1.4,2.8,1.8c1,0.4,2.1,0.6,3.8,0.7c1.6,0.1,2.2,0.1,6.5,0.1 s4.8,0,6.5-0.1c1.6-0.1,2.9-0.3,3.8-0.7c1-0.4,1.9-0.9,2.8-1.8c0.9-0.9,1.4-1.7,1.8-2.8c0.4-1,0.6-2.1,0.7-3.8 c0.1-1.6,0.1-2.2,0.1-6.5s0-4.8-0.1-6.5c-0.1-1.6-0.3-2.9-0.7-3.8c-0.4-1-0.9-1.9-1.8-2.8c-0.9-0.9-1.7-1.4-2.8-1.8 c-1-0.4-2.1-0.6-3.8-0.7C24.8,4.3,24.3,4.3,20,4.3L20,4.3L20,4.3z"
+    fill="currentColor"></path>
+    <path d="M20,11.9c-4.5,0-8.1,3.7-8.1,8.1s3.7,8.1,8.1,8.1s8.1-3.7,8.1-8.1S24.5,11.9,20,11.9z M20,25.2c-2.9,0-5.2-2.3-5.2-5.2 s2.3-5.2,5.2-5.2s5.2,2.3,5.2,5.2S22.9,25.2,20,25.2z"
+    fill="currentColor"></path>
+    <path d="M30.6,11.6c0,1-0.8,1.9-1.9,1.9c-1,0-1.9-0.8-1.9-1.9s0.8-1.9,1.9-1.9C29.8,9.7,30.6,10.5,30.6,11.6z" fill="currentColor"></path>
+  </symbol>
+  <symbol id="icon-slack" viewbox="0 0 40 40">
+    <path d="M33.9,18.8c0.8,0,1.5,0.3,2.1,0.8c0.6,0.5,0.8,1.2,0.8,2c0,1.3-0.6,2.2-1.9,2.6l-3.4,1.2l1.1,3.3c0.1,0.3,0.1,0.6,0.1,0.9 c0,0.8-0.3,1.5-0.8,2c-0.6,0.6-1.2,0.9-2,0.9c-0.6,0-1.2-0.2-1.7-0.5c-0.5-0.4-0.9-0.8-1.1-1.4l-1.1-3.3l-6.2,2.1l1.1,3.3 c0.1,0.3,0.2,0.6,0.2,0.9c0,0.8-0.3,1.5-0.8,2c-0.6,0.6-1.2,0.9-2,0.9c-0.6,0-1.2-0.2-1.7-0.5c-0.5-0.4-0.9-0.8-1.1-1.4l-1.1-3.3 l-3.1,1.1c-0.4,0.1-0.7,0.2-1,0.2c-0.8,0-1.5-0.3-2-0.8c-0.5-0.5-0.8-1.2-0.8-2c0-0.6,0.2-1.2,0.5-1.7c0.4-0.5,0.8-0.9,1.4-1.1 l3.1-1.1l-2.1-6.2l-3.1,1.1c-0.3,0.1-0.7,0.2-1,0.2c-0.8,0-1.5-0.3-2-0.8c-0.5-0.5-0.8-1.2-0.8-2c0-0.6,0.2-1.2,0.5-1.7 s0.8-0.9,1.4-1.1l3.1-1.1l-1.1-3.2c-0.1-0.3-0.2-0.6-0.2-0.9c0-0.8,0.3-1.5,0.8-2s1.2-0.8,2-0.8c0.6,0,1.2,0.2,1.7,0.5 c0.5,0.4,0.9,0.8,1.1,1.4l1.1,3.2l6.2-2.1l-1.1-3.2c-0.1-0.3-0.2-0.6-0.2-0.9c0-0.8,0.3-1.5,0.8-2c0.6-0.6,1.2-0.9,2-0.9 c0.6,0,1.2,0.2,1.7,0.5c0.5,0.4,0.9,0.8,1.1,1.4l1.1,3.2l3.2-1.1c0.3-0.1,0.6-0.1,0.9-0.1c0.8,0,1.5,0.3,2,0.8 c0.6,0.5,0.8,1.2,0.8,2c0,0.6-0.2,1.1-0.6,1.6c-0.4,0.5-0.9,0.8-1.5,1l-3.1,1.1l2.1,6.3L33,19C33.3,18.9,33.6,18.8,33.9,18.8 L33.9,18.8z M18.1,24.1l6.2-2.1l-2.1-6.3L16,17.8L18.1,24.1z"
+    fill="currentColor"></path>
+  </symbol>
+  </svg>
+  <div id="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#services">Gatherings</a>
+          </li>
+          <li>
+            <a href="#sermon">Sermons</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#giving">Giving</a>
+          </li>
+        </ul><a href="#">^</a>
+      </nav>
+      <hr>
+      <h1>Redeemer City Church</h1>
+      <svg title="Skyline Logo"><use xlink:href="#logo"></use></svg><br>
+      <span>Seeking the renewal of the Fitchburg/Madison area through the Gospel</span>
+    </header>
+    <hr>
+    <section id="about">
+      <h2 style="display:none">About</h2>
+      <section>
+        <h3>Vision</h3>
+        <p>To see a Gospel movement that reconciles a people back to God and into a true community that is sent out to love and serve our
+          City. Through demonstrating and declaring the Gospel we hope to see our City experience spiritual, social, and cultural renewal to
+          the glory of God.</p>
+      </section>
+      <section>
+        <h3>Core Values</h3>
+        <dl>
+          <dt>Gospel-Centered</dt>
+          <dd>The life, death, and resurrection of Jesus is the message through which someone believes and is rescued from death to
+            life.</dd>
+          <dt>Community</dt>
+          <dd>This called out community serves one another and the broader City through the individual gifts in a collective whole.</dd>
+          <dt>Mission</dt>
+          <dd>Jesus says “as the Father has sent me, so now I send you.”</dd>
+          <dt>City Groups</dt>
+          <dd>This is where we find true community in having meals with one another, studying Scripture together, and serving our families
+            and neighborhood.</dd>
+          <dt>Service</dt>
+          <dd>We will identify local needs within our city and fill those spaces with Gospel intentionality.</dd>
+          <dt>Equipping People to Serve</dt>
+          <dd>We are committed to investing in the lives of people, not only to reach them with the good news of the Gospel and not only to
+            teach them the truth of the Gospel and how to faithfully follow God, but to equip them to do this with others as well.</dd>
+          <dt>Church Planting</dt>
+          <dd>When Jesus gives his followers the great commission, He sends them out to make disciples of all people and baptize them into
+            a worshiping community.</dd>
+          <dt>Networking &amp; Partnering</dt>
+          <dd>If we are going to see our City renewed by the Gospel we will need to partner with other like-minded churches and
+            organizations.</dd>
+        </dl>
+        <p>More details are available in our <a download="RedeemerCity-SoF.pdf" href="#">statement&nbsp;of&nbsp;faith(pdf)</a></p>
+      </section>
+      <section>
+        <h3>Church Networks</h3>
+        <p>Redeemer City works with, supports, and submits to the leadership of several church networks and churches both local and
+        national.</p>
+        <ul>
+          <!-- TODO: Find logos and an actual list -->
+          <li>
+            <a href="" rel="noopener" target="_blank" title="Acts29">
+              <svg title="Acts29"><use xlink:href="#icon-slack"></use></svg>
+              <span>Acts29</span>
+            </a>
+          </li>
+          <li>
+            <a href="" rel="noopener" target="_blank" title="EFCA">
+              <svg title="EFCA"><use xlink:href="#icon-slack"></use></svg>
+              <span>EFCA</span>
+            </a>
+          </li>
+          <li>
+            <a href="" rel="noopener" target="_blank" title="Madison Multiply">
+              <svg title="Madison Multiply"><use xlink:href="#icon-slack"></use></svg>
+              <span>Madison Multiply</span>
+            </a>
+          </li>
+          <li>
+            <a href="" rel="noopener" target="_blank" title="The Vine">
+              <svg title="The Vine"><use xlink:href="#icon-slack"></use></svg>
+              <span>The Vine</span>
+            </a>
+          </li>
+          <li>
+            <a href="" rel="noopener" target="_blank" title="Eastside Church">
+              <svg title="Eastside Church"><use xlink:href="#icon-slack"></use></svg>
+              <span>Eastside Church</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section id="leadership">
+        <h3>Leadership</h3>
+        <section>
+          <header>
+            <h4>Nate Hobert</h4>
+            <p>Pastor of Spiritual Formation</p>
+          </header>
+          <img alt="Nate Hobert Portrait" src="https://www.csmedia1.com/redeemercitychurch.org/nate-headshot.jpg">
+          <p>Nathan oversees the spiritual formation for Redeemer City Church. He focuses on growing the church on a personal level by
+            shepherding our people in the Gospel. These responsibilities include discipleship & personal growth, counseling, City Group
+            oversight, and body life issues.</p>
+          <a href="mailto:%69%6e%66%6f%40%72%65%64%65%65%6d%65%72%63%69%74%79%63%68%75%72%63%68%2e%6f%72%67" rel="noopener" target="_blank" title=
+            "Email">
+            <svg title="Email"><use xlink:href="#icon-email"></use></svg>
+            <span>Email</span>
+          </a>
+        </section>
+        <section>
+          <header>
+            <h4>Casey Johnson</h4>
+            <p>Pastor of Vision and Mission</p>
+          </header>
+          <img alt="Casey Johnson Portrait" src="https://www.csmedia1.com/redeemercitychurch.org/case.jpg">
+          <p>Casey oversees the vision and mission for Redeemer City. He will be the primary vision caster and implementer and ensures that
+            we are striving toward the overarching vision for the church. These responsibilities include analyzing where our church is at and
+            where we need to go, not only so we don’t drift from our mission, but so that we continually use our gifts to reach our
+            community, city and world.</p>
+          <a href="mailto:%69%6e%66%6f%40%72%65%64%65%65%6d%65%72%63%69%74%79%63%68%75%72%63%68%2e%6f%72%67"
+            rel="noopener" target="_blank" title="Email">
+            <svg title="Email"><use xlink:href="#icon-email"></use></svg>
+            <span>Email</span>
+          </a>
+        </section>
+      </section>
+      <section>
+        <h3>Community Partners</h3>
+        <p>Redeemer City works along side existing networks to serve our community.</p>
+        <ul>
+          <!-- TODO: Find logos and an actual list -->
+          <li>
+            <a href="" rel="noopener" target="_blank" title="School1">
+              <svg title="School1"><use xlink:href="#icon-slack"></use></svg>
+              <span>School1</span>
+            </a>
+          </li>
+          <li>
+            <a href="" rel="noopener" target="_blank" title="School2">
+            <svg title="School2"><use xlink:href="#icon-slack"></use></svg>
+            <span>School2</span>
+          </a>
+          </li>
+          <li>
+            <a href="" rel="noopener" target="_blank" title="Food">
+              <svg title="Food"><use xlink:href="#icon-slack"></use></svg>
+              <span>Food</span>
+            </a>
+          </li>
+          <li>
+            <a href="" rel="noopener" target="_blank" title="Needs">
+              <svg title="Needs"><use xlink:href="#icon-slack"></use></svg>
+              <span>Needs</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <hr>
+    <section id="services">
+      <h2 style="display:none">Services</h2>
+      <section>
+        <h3>Worship</h3>
+        <p>Descriptive sentence.</p>
+        <p><strong>Sundays at 10:00am</strong></p>
+        <address>5356 King James Way<br>
+        Fitchburg, WI 53719</address>
+      </section>
+      <section>
+        <h3>City Groups</h3>
+        <p>Small groups that gather throughout the week to discuss the sermon and serve their communities.</p><br>
+        <a href="https://rivercitydbq.churchcenteronline.com/groups/small-groups" target="_blank">Find a City&nbsp;Group</a>
+      </section>
+    </section>
+    <hr>
+    <section id="sermon">
+      <h2>Sermons</h2>
+      <p>Download or subscribe at Soundcloud, iTunes, or Google Podcasts</p>
+      <ul>
+        <!-- TODO: Find logos and an actual list -->
+        <li>
+          <a href="" rel="noopener" target="_blank" title="SoundCloud">
+            <svg title="SoundCloud"><use xlink:href="#icon-slack"></use></svg>
+            <span>SoundCloud</span>
+          </a>
+        </li>
+        <li>
+          <a href="" rel="noopener" target="_blank" title="iTunes">
+            <svg title="iTunes"><use xlink:href="#icon-slack"></use></svg>
+            <span>iTunes</span>
+          </a>
+        </li>
+        <li>
+          <a href="" rel="noopener" target="_blank" title="Google Podcasts">
+            <svg title="Google Podcasts"><use xlink:href="#icon-slack"></use></svg>
+            <span>Google Podcasts</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <hr>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Use this form or the icons in the footer to get in touch with us.</p>
+      <form action="https://script.google.com/macros/s/AKfycby8CCYPu2q4DB1WAwG3pA8acbr2MYxlLxky5xvkiVnXdTFKaQ/exec" id="contact_form"
+        method="post" name="contact_form">
+        <input id="contact_name" maxlength="128" name="name" placeholder="Name" required="" type="text">
+        <input id="contact_email" maxlength="128" name="email" placeholder="Email" required="" type="email">
+        <input id="contact_subject" maxlength="128" name="subject" placeholder="Subject" required="" type="text"> 
+        <textarea id="contact_message" maxlength="16384" name="message" placeholder="Message..." required="" type="text"></textarea>
+        <button type="submit">Send</button> 
+        <input name="contact_trap" placeholder="Bot_Trap_leave_empty" style="display:none" type="phone">
+      </form>
+    </section>
+    <hr>
+    <section id="giving">
+      <h2>Giving</h2>
+      <!-- TODO: Borrowed from eastside, consider rewording -->
+      <p>Giving financially is an opportunity to respond to God’s generosity to us. Giving is not an obligation, it’s a privilege for all
+        those who follow Jesus. Giving is a way God shapes our hearts and aligns ours with His. It’s a way for us to be a part of something
+        far bigger and beyond ourselves. It’s why when we give, we often experience a greater joy than any sacrifice we’ve made.</p>
+      <a href="https://redeemermadison.churchcenter.com/giving?open-in-church-center-modal=true" rel="noopener" target="_blank" title=
+        "Give via Church Center">Give</a>
+    </section>
+    <hr>
+    <footer>
+      <ul>
+        <li>
+          <a href="#" rel="noopener" target="_blank" title="Slack">
+            <svg title="Slack"><use xlink:href="#icon-slack"></use></svg>
+            <span>Slack</span>
+          </a>
+        </li>
+        <li>
+          <a href="//instagram.com/RedeemerMadison" rel="noopener" target="_blank" title="Instagram">
+            <svg title="Instagram"><use xlink:href="#icon-insta"></use></svg>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="//twitter.com/RedeemerMadison" rel="noopener" target="_blank" title="Twitter">
+            <svg title="Twitter"><use xlink:href="#icon-insta"></use></svg>
+            <span>Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:%69%6e%66%6f%40%72%65%64%65%65%6d%65%72%63%69%74%79%63%68%75%72%63%68%2e%6f%72%67" rel="noopener" target="_blank"
+            title="Email">
+            <svg title="Email"><use xlink:href="#icon-email"></use></svg>
+            <span>Email</span>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
