@@ -20,7 +20,7 @@
       <itunes:name>{{ site.podcast_author }}</itunes:name>
       <itunes:email>{{ site.podcast_email }}</itunes:email>
     </itunes:owner>
-        {% for ep in site.posts %}
+        {% for ep in site.sermons %}
         <item>
             <title>{{ ep.title }}</title>
             <link>{{ ep.podcast_link }}</link>
