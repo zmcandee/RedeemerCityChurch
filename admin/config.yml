@@ -8,6 +8,9 @@ collections:
   - name: 'sermons'
     label: 'Sermons'
     folder: '_sermons/'
+    slug: sermon-{{year}}{{month}}{{day}}
     fields:
-      - { name: Title }
-        { name: Description, type: markdown }
+      - { name: Title, label: title, widget: string }
+      - { name: Description, widget: markdown }
+      - { name: UUID, label: uuid, widget: string }
+      - { name: Date, label: pubdate, widget: datetime }
