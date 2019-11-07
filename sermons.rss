@@ -1,5 +1,5 @@
 ---
-layout: null
+
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:psc="https://podlove.org/simple-chapters/" version="2.0">
@@ -10,7 +10,7 @@ layout: null
     <description>{{ site.podcast_description }}</description>
     <itunes:author>{{ site.podcast_author }}</itunes:author>
     <language>en-us</language>
-    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %T %z" }}</lastBuildDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <itunes:category text="{{ site.podcast_category }}">
         <itunes:category text="{{ site.podcast_subcategory }}" />
     </itunes:category>
@@ -20,22 +20,17 @@ layout: null
       <itunes:name>{{ site.podcast_author }}</itunes:name>
       <itunes:email>{{ site.podcast_email }}</itunes:email>
     </itunes:owner>
-
-        {% for ep in site.categories.podcast %}
+        {% for ep in site.posts %}
         <item>
             <title>{{ ep.title }}</title>
             <link>{{ ep.podcast_link }}</link>
             <pubDate>{{ ep.pubdate | date: "%Y-%m-%d" }}</pubDate>
-            <itunes:category text="{{ site.podcast_category }}">
-                <itunes:category text="{{ site.podcast_subcategory }}"/>
-             </itunes:category>
             <guid isPermaLink="false">{{ ep.podcast_uuid }}</guid>
             <description>
                 <content:encoded><![CDATA[{{ ep.content | cdata_escape }}]]></content:encoded>
             </description>
-
             <enclosure url="{{ ep.podcast_link }}" length="{{ ep.podcast_length }}" type="audio/mpeg" />
-            <itunes:image href="{{ ep.image }}" />
+            <itunes:image href="{% if ep.image %}{{ ep.image }}{% else %}{{ site.url }}/assets/img/rccpodcastlogo.png{% endif %}" />
             <itunes:explicit>{{ site.podcast_explicit }}</itunes:explicit>
             <itunes:duration>{{ ep.podcast_duration }}</itunes:duration>
         </item>
