@@ -23,7 +23,7 @@ layout: null
       <itunes:email>{{site.podcast_email}}</itunes:email>
     </itunes:owner>
 
-        {% for ep in site.sermons %}
+        {% for ep in site.posts %}
         <item>
             <title><![CDATA[{{ ep.title | cdata_escape }}]]></title>
             <link>{{ site.url }}{{ ep.url }}</link>
@@ -31,9 +31,9 @@ layout: null
             <itunes:category text="{{site.podcast_category}}">
                 <itunes:category text="{{site.podcast_subcategory}}"/>
              </itunes:category>
-            <guid isPermaLink="false">{{ uuid }}</guid>
+            <guid isPermaLink="false">{{ ep.uuid }}</guid>
             <description>
-                <content:encoded><![CDATA[{{ content | cdata_escape }}]]></content:encoded>
+                <content:encoded><![CDATA[{{ ep.content | cdata_escape }}]]></content:encoded>
             </description>
 
             <enclosure url="{{ ep.podcast_link }}" length="{{ ep.podcast_length }}" type="audio/mpeg" />
