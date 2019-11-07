@@ -1,0 +1,48 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:psc="https://podlove.org/simple-chapters/" version="2.0">
+  <channel>
+    <title>{{site.podcast_title}}</title>
+    <link>{{site.podcast_url}}</link>
+    <atom:link href="{{site.url}}" rel="self" type="application/rss+xml" />
+    <description>{{site.podcast_description}}</description>
+    <itunes:author>{{site.podcast_author}}</itunes:author>
+    <language>en-us</language>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %T %z" }}</lastBuildDate>
+    <itunes:category text="{{site.podcast_category}}">
+        <itunes:category text="{{site.podcast_subcategory}}" />
+    </itunes:category>
+    <itunes:explicit>{{site.podcast_explicit}}</itunes:explicit>
+    <itunes:image href="{{site.url}}/assets/img/rccpodcastlogo.png"/>
+    <itunes:subtitle>{{site.podcast_subtitle}}</itunes:subtitle>
+    <itunes:summary>{{site.podcast_summary}}</itunes:summary>
+    <itunes:owner>
+      <itunes:name>{{site.podcast_title}}</itunes:name>
+      <itunes:email>{{site.podcast_email}}</itunes:email>
+    </itunes:owner>
+
+        {% for ep in site.sermons %}
+        <item>
+            <title><![CDATA[{{ ep.title | cdata_escape }}]]></title>
+            <link>{{ site.url }}{{ ep.url }}</link>
+            <pubDate>{{ ep.pubdate | date: "%Y-%m-%d" }}</pubDate>
+            <itunes:category text="{{site.podcast_category}}">
+                <itunes:category text="{{site.podcast_subcategory}}"/>
+             </itunes:category>
+            <guid isPermaLink="false">{{ uuid }}</guid>
+            <description>
+                <content:encoded><![CDATA[{{ content | cdata_escape }}]]></content:encoded>
+            </description>
+
+            <enclosure url="{{ ep.podcast_link }}" length="{{ ep.podcast_length }}" type="audio/mpeg" />
+            <itunes:subtitle>{{ ep.summary | strip_html | expand_urls: site.url | cdata_escape }}</itunes:subtitle>
+            <itunes:summary>{{ ep.summary | expand_urls: site.url | cdata_escape }}</itunes:summary>
+            <itunes:image href="{{ep.image}}" />
+            <itunes:explicit>{{site.podcast_explicit}}</itunes:explicit>
+            <itunes:duration>{{ ep.podcast_duration }}</itunes:duration>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>
