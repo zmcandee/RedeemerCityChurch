@@ -20,20 +20,18 @@
       <itunes:name>{{ site.podcast_author }}</itunes:name>
       <itunes:email>{{ site.podcast_email }}</itunes:email>
     </itunes:owner>
-        {% for ep in site.sermons %}
-        <item>
+        {% for ep in site.sermons %}<item>
             <title>{{ ep.title }}</title>
-            <link>{{ ep.podcast_link }}</link>
+            <link>{{ ep.audio }}</link>
             <pubDate>{{ ep.pubdate | date: "%Y-%m-%d" }}</pubDate>
-            <guid isPermaLink="false">{{ ep.podcast_uuid }}</guid>
+            <guid isPermaLink="false">{{ ep.uuid }}</guid>
             <description>
                 <content:encoded><![CDATA[{{ ep.content | cdata_escape }}]]></content:encoded>
             </description>
             <enclosure url="{{ ep.podcast_link }}" length="{{ ep.podcast_length }}" type="audio/mpeg" />
             <itunes:image href="{% if ep.image %}{{ ep.image }}{% else %}{{ site.url }}/assets/img/rccpodcastlogo.png{% endif %}" />
             <itunes:explicit>{{ site.podcast_explicit }}</itunes:explicit>
-            <itunes:duration>{{ ep.podcast_duration }}</itunes:duration>
-        </item>
-        {% endfor %}
+            <itunes:duration>{{ ep.duration }}</itunes:duration>
+        </item>{% endfor %}
     </channel>
 </rss>
