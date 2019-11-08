@@ -13,7 +13,7 @@ collections:
     folder: '_sermons/'
     create: true
     slug: sermon-{{year}}{{month}}{{day}}
-    summary: '{{pubdate}}: {{title}}'
+    summary: '{{year}}{{month}}{{day}}- {{title}}'
     fields:
       - { name: title, label: Title, widget: string }
       - { name: audio, label: Audio Link, widget: string }
