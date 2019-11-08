@@ -10,9 +10,11 @@ collections:
   - name: 'sermons'
     label: 'Sermons'
     folder: '_sermons/'
+    create: true
     slug: sermon-{{year}}{{month}}{{day}}
     fields:
       - { name: Title, label: title, widget: string }
-      - { name: Description, widget: markdown }
+      - { name: URL, label: link, widget: string }
       - { name: UUID, label: uuid, widget: string }
       - { name: Date, label: pubdate, widget: datetime }
+      - { name: Description, label: content, widget: markdown }
