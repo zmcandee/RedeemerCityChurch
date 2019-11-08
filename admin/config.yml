@@ -2,6 +2,7 @@
 
 backend:
   name: github
+  repo: zmcandee/RedeemerCityChurch
   branch: master
   base_url: https://script.google.com/macros/s/AKfycbwuVtIKzFuBmZS1UMMHnbFFmX_A_St3lhfS5GjCihPeTSgfeHI/exec
 media_folder: 'assets/uploads'
