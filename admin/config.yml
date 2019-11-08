@@ -8,14 +8,15 @@ backend:
 media_folder: 'assets/uploads'
 collections:
   - name: 'sermons'
-    name_singular: 'sermon'
+    label_singular: 'Sermon'
     label: 'Sermons'
     folder: '_sermons/'
     create: true
     slug: sermon-{{year}}{{month}}{{day}}
+    summary: {{year}}{{month}}{{day}}: {{title}}
     fields:
       - { name: title, label: Title, widget: string }
       - { name: url, label: Audio Link, widget: string }
-      - { name: uuid, label: UUID, widget: string }
+      - { name: uuid, label: UUID, required: false, widget: string }
       - { name: pubdate, label: Date, widget: datetime }
-      - { name: descripton, label: Description, widget: markdown }
+      - { name: body, label: Description, widget: markdown }
