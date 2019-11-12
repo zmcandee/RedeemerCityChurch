@@ -25,17 +25,17 @@
 	@-ms-keyframes fadein{from{opacity:0}to{opacity:1}}
         body{color:var(--color-fg);background:var(--color-bg);text-align:center;margin:0;padding:0;font-family:Oswald,san-serif;font-weight:300}
 	body > section {max-width:900px;min-height:100%;height:auto;margin:0 auto;padding:0 1em}
-        h1,h2,h3,h4{display:block;text-transform:uppercase;letter-spacing:0.2em;font-weight:900;font-family:Lato,san-serif;}
+        h1,h2,h3,h4{padding:2rem 0 0;margin:0;display:block;text-transform:uppercase;letter-spacing:0.2em;font-weight:900;font-family:Lato,san-serif;}
         a{color:var(--color-soft-fg);text-decoration:none}
         a:hover{color:var(--color-accent);text-decoration:none;font-variant:italic}
         dd,p{line-height:1.7em;margin-bottom:1em}
         header > p{line-height:1rem}
 
-        body > header > svg{max-width:300px;height:205px;margin:0 auto;display:block}
+        body > header > svg{max-width:300px;height:205px;margin:2rem auto;display:block}
 	body > header > p{margin:0 1em}
 
         ul{list-style:none;display:block;padding:0;margin:1em 0 0 0}
-        ul > li{display:inline-block;margin:0.5em;padding:0}
+        ul > li{display:inline-block;margin:0.6rem;padding:0}
         nav > ul > li > a{min-width:3.5em;background:var(--color-soft-fg);padding:0.5em 2em;display:block;color:var(--color-bg);text-decoration:none;border-radius:0.5em;text-transform:uppercase}
         nav > ul > li > a:hover{background:var(--color-accent);color:var(--color-bg)}
         nav > a{width:2em;height:2em;background:var(--color-soft-fg);border-radius:100%;display:none;justify-content:center;align-items:center;font-weight:bold;color:var(--color-bg);text-decoration:none;position:fixed;bottom:1em;right:1em}
@@ -46,7 +46,8 @@
             nav > a{display:flex}
         }
 
-        section > section{padding-top:2rem}
+        section > section{margin-top:2rem}
+	section li>a>span,#services>h2,#about>h2,form>label{clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);height: 1px;width: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute}
 
         dl{text-align:left;padding:0;margin:0;display:block}
         dt{font-family:Lato,san-serif;text-transform:uppercase;font-weight:700;display:inline-block}
@@ -56,27 +57,27 @@
         #leadership > section > img{border-radius:100%;width:200px;height:200px;margin:0 auto}
 
         #leadership a > svg{width:1.1em;height:1.1rem;padding:0;margin:0 0.5em 0 0;}
-        #sermon a{width:3em;height:3rem}
+	#sermon a,#sermon a>svg{width:3em;height:3rem}
 
         section ul{display:inline-block}
         section li > a{color:var(--color-soft-fg);width:120px;height:120px;display:flex;justify-content:center;align-items:center}
         section li > a:hover{color:var(--color-accent)}
-        section li > a > span{display:none}
 
         form{max-width:600px;margin:0 auto}
-        input[type="text"], input[type="email"],textarea{padding:0 1rem;font-size:1rem;line-height:1.6em;height:2em;background:var(--color-soft-fg);border:none;border-radius:0.5rem;margin:0.5rem auto;width:85%;font:inherit;color:var(--color-bg)}
+        input,textarea{padding:0 1rem;font-size:1rem;line-height:1.6em;height:2em;background:var(--color-soft-fg);border:none;border-radius:0.5rem;margin:0.5rem auto;width:85%;font:inherit;color:var(--color-bg)}
         textarea::placeholder, input::placeholder{opacity:1;color:var(--color-soft-bg)}
-        textarea{height:8em}
+        textarea{height:10em;resize:vertical}
         #leadership a, #giving a, #services a, button{font:inherit;min-width:3.5em;background:var(--color-soft-fg);padding:0.5em 2em;border:none;margin:2em;display:inline-block;color:var(--color-bg);text-decoration:none;border-radius:0.5em;text-transform:uppercase}
         #leadership a:hover, #giving a:hover, #services a:hover, button:hover{background:var(--color-accent);color:var(--color-bg)}
 
-        footer{background:none;color:var(--color-fg)}
+        footer{background:none;color:var(--color-fg);margin-bottom:2rem}
         footer > ul{display:inline-block}
         footer > ul > li > a{color:var(--color-bg);width:2em;height:2em;background:var(--color-soft-fg);border-radius:100%;display:flex;justify-content:center;align-items:center}
         footer > ul > li > a:hover{background:var(--color-accent);color:var(--color-bg)}
         footer > ul > li > a > span{display:none}
         footer > ul > li > a > svg{width:60%;height:60%;display:block;position:relative}
-        hr{border:none;border-top:1px var(--color-fg) solid;margin:2rem auto;max-width:900px}
+        hr{border:none;border-top:1px var(--color-fg) solid;margin:2rem auto 0;max-width:800px}
+	@media screen and (max-width:900px){hr{margin:2rem 2rem 0}}
   </style>
   <script async src="https://js.churchcenter.com/modal/v1">
   </script>
@@ -129,14 +130,13 @@
           </li>
         </ul><a href="#">&#8593;</a>
       </nav>
-      <hr>
       <h1>Redeemer City Church</h1>
-      <svg title="Skyline Logo"><use xlink:href="#logo"></use></svg><br>
+      <svg title="Skyline Logo"><use xlink:href="#logo"></use></svg>
       <p>Seeking the renewal of the Fitchburg/Madison area through the Gospel</p>
     </header>
     <hr>
     <section id="about">
-      <h2 style="display:none">About</h2>
+      <h2>About</h2>
       <section>
         <h3>Vision</h3>
         <p>To see a Gospel movement that reconciles a people back to God and into a true community that is sent out to love and serve our
@@ -276,7 +276,7 @@
     </section>
     <hr>
     <section id="services">
-      <h2 style="display:none">Services</h2>
+      <h2>Services</h2>
       <section>
         <h3>Worship</h3>
         <p>Descriptive sentence.</p>
@@ -322,12 +322,15 @@
       <p>Use this form or the icons in the footer to get in touch with us.</p>
       <form action="https://script.google.com/macros/s/AKfycby8CCYPu2q4DB1WAwG3pA8acbr2MYxlLxky5xvkiVnXdTFKaQ/exec" id="contact_form"
         method="post" name="contact_form">
+	<label for="contact_name">Name:</label>
         <input id="contact_name" maxlength="128" name="name" placeholder="Name" required="" type="text">
-        <input id="contact_email" maxlength="128" name="email" placeholder="Email" required="" type="email">
-        <input id="contact_subject" maxlength="128" name="subject" placeholder="Subject" required="" type="text"> 
+	<label for="contact_email">Email:</label>
+        <input id="contact_email" maxlength="255" name="email" placeholder="Email" required="" type="email">
+	<label for="contact_subject">Subject:</label>
+        <input id="contact_subject" maxlength="128" name="subject" placeholder="Subject" required="" type="text">
+	<label for="contact_message">Message:</label>
         <textarea id="contact_message" maxlength="16384" name="message" placeholder="Message..." required="" type="text"></textarea>
         <button type="submit">Send</button> 
-        <input name="contact_trap" placeholder="Bot_Trap_leave_empty" style="display:none" type="phone">
       </form>
     </section>
     <hr>
