@@ -13,9 +13,10 @@ collections:
     folder: '_sermons/'
     create: true
     slug: sermon-{{year}}{{month}}{{day}}
-    summary: '{{year}}{{month}}{{day}}- {{title}}'
+    summary: '{{pubdate}}-[{{series}}] {{title}}'
     fields:
       - { name: title, label: Title, widget: string }
+      - { name: series, label: Series, widget: string }
       - { name: audio, label: Audio Link, widget: string }
       - { name: image, label: Image Link, required: false, widget: string }
       - { name: uuid, label: UUID, required: false, widget: string }
