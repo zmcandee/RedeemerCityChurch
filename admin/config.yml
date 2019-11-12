@@ -20,5 +20,5 @@ collections:
       - { name: audio, label: Audio Link, widget: string }
       - { name: image, label: Image Link, required: false, widget: string }
       - { name: uuid, label: UUID, required: false, widget: string }
-      - { name: pubdate, label: Date, widget: date }
+      - { name: pubdate, label: Date, widget: date, format: 'YYYY-MM-DD' }
       - { name: body, label: Description, widget: markdown }
