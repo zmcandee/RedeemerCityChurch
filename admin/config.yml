@@ -17,7 +17,12 @@ collections:
     fields:
       - { name: title, label: Title, widget: string }
       - { name: series, label: Series, widget: list, allow_add: true }
-      - { name: audio, label: Audio Link, widget: object, fields: [ { name: file, label: File, widget: file }, { name: duration, label: Duration, widget: number, valueType: int, min: 0 } ] }
+      - name: audio 
+        label: Audio 
+        widget: object 
+        fields: 
+          - { name: file, label: File, widget: file }
+            { name: duration, label: Duration, widget: number, valueType: int, min: 0 } 
       - { name: image, label: Image, required: false, widget: image, allow_multiple: false }
       - { name: uuid, label: UUID, required: false, widget: string }
       - { name: pubdate, label: Date, widget: datetime, timeFormat: false, dateFormat: 'YYYY-MM-DD', format: 'YYYY-MM-DD' }
