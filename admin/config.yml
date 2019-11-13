@@ -22,7 +22,7 @@ collections:
         widget: object 
         fields: 
           - { name: file, label: File, widget: file }
-            { name: duration, label: Duration, widget: number, valueType: int, min: 0 } 
+          - { name: duration, label: Duration, widget: number, valueType: int, min: 0 } 
       - { name: image, label: Image, required: false, widget: image, allow_multiple: false }
       - { name: uuid, label: UUID, required: false, widget: string }
       - { name: pubdate, label: Date, widget: datetime, timeFormat: false, dateFormat: 'YYYY-MM-DD', format: 'YYYY-MM-DD' }
