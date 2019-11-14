@@ -12,7 +12,8 @@ collections:
     label_singular: 'Leader'
     folder: '_leaders/'
     create: true
-    slug: '{{name}}'
+    identifier_field: name
+    summary: '{{name}}-{{role}}'
     fields:
       - { name: name, label: Name, widget: string }
       - { name: email, label: Email, required: false, widget: string }
