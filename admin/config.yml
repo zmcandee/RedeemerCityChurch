@@ -7,6 +7,19 @@ backend:
   base_url: https://gh-oauth-gateway.appspot.com
 media_folder: 'assets/uploads'
 collections:
+  - name: 'leaders'
+    label: 'Leaders'
+    label_singular: 'Leader'
+    folder: '_leaders/'
+    create: true
+    slug: '{{name}}'
+    fields:
+      - { name: name, label: Name, widget: string }
+      - { name: email, label: Email, required: false, widget: string }
+      - { name: role, label: Role, widget: string }
+      - { name: image, label: Picture, required: false, widget: image, allow_multiple: false }
+      - { name: display, label: Show on main page, widget: boolean }
+      - { name: body, label: Description, widget: markdown }
   - name: 'sermons'
     label_singular: 'Sermon'
     label: 'Sermons'
