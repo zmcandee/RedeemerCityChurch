@@ -213,9 +213,9 @@
           </li>
         </ul>
       </section>
-      {% if site.leaders | where:"display","true" %}<section id="leadership">
+      {% assign visibleLeaders = site.leaders | where:"display","true" %}{% if visibleLeaders %}<section id="leadership">
         <h3>Leadership</h3>
-	{% for leader in site.leaders | where:"display","true" %}
+	{% for leader in visibleLeaders %}
         <section>
           <header>
             <h4>{{ leader.name }}</h4>
