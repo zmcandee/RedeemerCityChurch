@@ -213,21 +213,20 @@
       </section>
       <section id="leadership">
         <h3>Leadership</h3>
+	{% for leader in site.leaders | where:"display","true" %}
         <section>
           <header>
-            <h4>Nate Hobert</h4>
-            <p>Pastor of Spiritual Formation</p>
+            <h4>{{ leader.name }}</h4>
+	    <p>{{ leader.role }}</p>
           </header>
-          <img alt="Nate Hobert Portrait" src="https://www.csmedia1.com/redeemercitychurch.org/nate-headshot.jpg">
-          <p>Nathan oversees the spiritual formation for Redeemer City Church. He focuses on growing the church on a personal level by
-            shepherding our people in the Gospel. These responsibilities include discipleship & personal growth, counseling, City Group
-            oversight, and body life issues.</p>
-          <a href="mailto:%6e%68%6f%62%65%72%74%40%72%65%64%65%65%6d%65%72%63%69%74%79%63%68%75%72%63%68%2e%6f%72%67%20" rel="noopener" target="_blank" title=
-            "Email">
+	  {% if leader.image %}<img alt="{{ leader.name }} Portrait" src="{{ leader.image }}"/> {% end if %}
+          <p>{{ leader.content }}</p>
+	  {% if leader.email %}<a href="mailto:{{ leader.email }}" rel="noopener" target="_blank" title="Email {{ leader.name }}">
             <svg title="Email"><use xlink:href="#icon-email"></use></svg>
             <span>Email</span>
-          </a>
+	  </a>{% end if %}
         </section>
+	{% end for %}
         <section>
           <header>
             <h4>Casey Johnson</h4>
