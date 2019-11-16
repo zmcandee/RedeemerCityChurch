@@ -6,6 +6,8 @@ backend:
   branch: master
   base_url: https://gh-oauth-gateway.appspot.com
 media_folder: 'assets/uploads'
+public_folder: '/RedeemerCityChurch/assets/uploads'
+publish_mode: editorial_workflow
 collections:
   - name: 'leaders'
     label: 'Leaders'
