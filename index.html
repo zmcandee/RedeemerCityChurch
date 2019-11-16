@@ -213,7 +213,7 @@
           </li>
         </ul>
       </section>
-      {% assign visibleLeaders = site.leaders | where:"display","true" %}{% if visibleLeaders | size %}<section id="leadership">
+      {% assign visibleLeaders = site.leaders | where:"display","true" %}{% assign vlc = visibleLeaders | size %}{% if vlc > 0 %}<section id="leadership">
         <h3>Leadership</h3>
 	{% for leader in visibleLeaders %}
         <section>
