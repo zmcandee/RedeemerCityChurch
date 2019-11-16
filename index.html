@@ -213,7 +213,7 @@
           </li>
         </ul>
       </section>
-      {% assign visibleLeaders = site.leaders | where:"display","true" %}{% if visibleLeaders %}<section id="leadership">
+      {% assign visibleLeaders = site.leaders | where:"display","true" %}{% if visibleLeaders | size %}<section id="leadership">
         <h3>Leadership</h3>
 	{% for leader in visibleLeaders %}
         <section>
@@ -222,7 +222,7 @@
 	    <p>{{ leader.role }}</p>
           </header>
 	  {% if leader.image %}<img alt="{{ leader.name }} Portrait" src="{{ leader.image }}"/> {% endif %}
-          <p>{{ leader.content }}</p>
+          {{ leader.content }}
 	  {% if leader.email %}<a href="mailto:{{ leader.email }}" rel="noopener" target="_blank" title="Email {{ leader.name }}">
             <svg title="Email"><use xlink:href="#icon-email"></use></svg>
             <span>Email</span>
