@@ -9,6 +9,16 @@ media_folder: 'assets/uploads'
 public_folder: '/RedeemerCityChurch/assets/uploads'
 publish_mode: editorial_workflow
 collections:
+  - name: 'sections'
+    label: 'Sections'
+    label_singular: 'Section'
+    folder: '_includes/'
+    format: html
+    identifier_field: name
+    slug: '{{ name }}'
+    fields:
+      - { name: name, label: Name, widget: string }
+      - { name: body, label: Code, widget: markdown }
   - name: 'leaders'
     label: 'Leaders'
     label_singular: 'Leader'
