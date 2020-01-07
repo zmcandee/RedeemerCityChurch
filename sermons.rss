@@ -15,7 +15,7 @@
         <itunes:category text="{{ site.podcast_subcategory }}" />
     </itunes:category>
     <itunes:explicit>{{ site.podcast_explicit }}</itunes:explicit>
-    <itunes:image href="{{ site.url }}/assets/podcast/rccpodcastlogo.png"/>
+    <itunes:image href="{{ site.podcast_image }}"/>
     <itunes:owner>
       <itunes:name>{{ site.podcast_author }}</itunes:name>
       <itunes:email>{{ site.podcast_email }}</itunes:email>
@@ -29,7 +29,7 @@
                 <content:encoded><![CDATA[{{ ep.content | cdata_escape }}]]></content:encoded>
             </description>
             <enclosure url="{{ ep.audio }}" length="{{ ep.podcast_length }}" type="audio/mpeg" />
-            <itunes:image href="{% if ep.image %}{{ ep.image }}{% else %}{{ site.url }}/assets/podcast/rccpodcastlogo.png{% endif %}" />
+            <itunes:image href="{% if ep.image %}{{ ep.image }}{% else %}{{ site.podcast_image }}{% endif %}" />
             <itunes:explicit>{{ site.podcast_explicit }}</itunes:explicit>
             <itunes:duration>{{ ep.duration }}</itunes:duration>
         </item>{% endfor %}
