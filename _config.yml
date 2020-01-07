@@ -9,7 +9,7 @@ collections:
 ## Podcast RSS configuration
 podcast_subtitle: "Sermons from Redeemer City Church: Madison, WI" 
 podcast_url: "https://RedeemerCityChurch.org"
-podcast_album_art: "http://RedeemerCityChurch.org/assets/img/rccpodcastlogo.png"
+podcast_album_art: "http://s3.amazonaws.com/churchplantmedia-cms/redeemer_city_church/itunes-logo.png"
 podcast_title: Redeemer City Church Sermons
 podcast_owner: Redeemer City Church
 podcast_email: info@redeemercitychurch.org
